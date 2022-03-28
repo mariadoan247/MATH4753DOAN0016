@@ -1,11 +1,23 @@
 Package: MATH4753doan0016
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: MATH-4753 Spring 2022
+Version: 0.1.0.9003
+Author: Maria V. Doan
+Maintainer: Maria Doan <mariadoan247@ou.edu>
+Description: This is the main package that I 
+  will be using to hold some lab functions and
+  will have other capabilities too.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.2
+URL: https://github.com/mariadoan247/MATH4753doan0016.git
+Depends:
+    R (>= 2.10)
+Suggests:
+    rmarkdown,
+    knitr
+Imports:
+    ggplot2
+VignetteBuilder: knitr
+
