@@ -1,0 +1,17 @@
+#' DDT data set for fish
+#'
+#' 144 lines of measurements on fish.
+#' A data set collected by the US forces from the Tennessee River and its tributaries.
+#'
+#' @format A data frame with 144 rows and 6 variables:
+#' \describe{
+#'   \item{RIVER}{river fish were captured in}
+#'   \item{MILE}{distance from the mouth of the river/creek}
+#'   \item{SPECIES}{species of fish captured}
+#'   \item{LENGTH}{length of the fish in cm}
+#'   \item{WEIGHT}{weight of the fish, in gms}
+#'   \item{DDT}{level of DDT contamination of fish}
+#' }
+#'
+#' @source \url{https://www.crcpress.com/Statistics-for-Enhineering-and-the-Sciences/Mendenhall-Sincich/p/book/9781498728850}
+"ddt"
