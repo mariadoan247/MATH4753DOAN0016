@@ -1,0 +1,77 @@
+---
+title: "What this Package Does"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{What this Package Does}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753doan0016)
+```
+
+
+# Introduction
+This R package contains some functions that were of great use for a few labs. It also contains a ddt data set that I will be using to show how some of the functions work. The labs this package will focus on are labs 8 and 9.
+
+
+# Lab 8 Functions
+This package has four lab 8 functions. Below I will give examples of how those functions work.
+
+## `myclt()`
+This is the Central Limit Theorem function from lab 8. It will produce a simple frequency vs. sample mean histogram of the given sample size and iterations. Below is an example of what this particular function could output.
+```{r}
+w = myclt(n = 10, iter = 10000)
+```
+
+## `mycltb()`
+This is the Central Limit Theorem Binomial function from lab 8. It will produce a density vs. sample mean histogram of the given sample size and iterations. In addition to those two parameters, it will also take a probability parameter. Below is an example of what this particular function could output.
+```{r}
+mycltb(n = 5, iter = 10000, p = 0.5)
+```
+
+## `mycltp()`
+This is the Central Limit Theorem Poisson function from lab 8. It will produce a density vs. sample mean histogram, relative frequency vs. y barplot, and a probability vs. y plot of the given sample size and iterations. In addition to those two parameters, it can also take a lambda parameter. Below is an example of what this particular function could output.
+```{r}
+par(mar = c(4, 4, 4, 4))
+mycltp(n = 10, iter = 10000, lambda = 10)
+```
+
+## `mycltu()`
+This is the Central Limit Theorem Uniform function from lab 8. It will produce a density vs. sample mean histogram of the given sample size and iterations. Below is an example of what this particular function could output.
+```{r}
+mycltu(n = 20, iter = 100000)
+```
+
+
+# Lab 9 Functions
+In this package, there is only one lab 9 function. Below I will demostrate what this particular function could output.
+
+## `myboot2()`
+This is the Bootstrap function from lab 9. It will make a number of plots, point and interval estimates and useful output in the form of a list. Some parameters for this function include: iterations, random sample, function, and alpha. Below is an example of what this particular function could output.
+```{r}
+set.seed(39)
+sam = rnorm(25, mean = 25, sd = 10)
+myboot2(10000, x = sam, fun = "mean", alpha = 0.05, 
+        xlab = "mean", col = "Purple", cx = 1.5)
+```
+
+
+# DDT Data Set
+This is the DDT data set sourced from the textbook that we have been using this semester in MATH-4753. It was collected by the US forces from the Tennessee River and its tributaries. Below I will give the contents of this data set.
+```{r}
+head(ddt)
+```
+
+
+
+
+
